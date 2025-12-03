@@ -56,8 +56,8 @@ smart_insurance_agent/
 
 ### STEP 1: Clone and Setup Environment
 ```bash
-git clone git@ssh.gitlab.aws.dev:skoppar/nova-1.5-reasoning.git
-cd smart_insurance_agent
+git clone git@github.com:aws-samples/sample-quicksuite-chatagent-insurance-underwriting.git
+cd sample-quicksuite-chatagent-insurance-underwriting
 
 # Create virtual environment and install dependencies
 python -m venv smart_insurance_agent_venv
