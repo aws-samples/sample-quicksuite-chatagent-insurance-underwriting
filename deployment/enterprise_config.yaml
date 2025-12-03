@@ -1,0 +1,31 @@
+# Nova Lite 2.0 Enterprise Insurance Configuration
+# Customize resource names for your deployment
+
+# DynamoDB Configuration
+dynamodb:
+  applicants_table: "nova-2-lite-insurance-applicants-test1"
+  claims_table: "nova-2-lite-insurance-claims-test1"
+
+# S3 Configuration
+s3:
+  bucket_name: "nova-2-lite-insurance-{account_id}-test1" # Will append region automatically
+  medical_records_prefix: "medical-records"
+
+# AgentCore Configuration
+agentcore:
+  mcp_server_name: "nova_2_lite_insurance_underwriting_mcp1"
+  cognito_user_pool_name: "nova-2-lite-insurance-userpool-test1"
+  oauth_api_identifier: "nova-2-lite-insurance-api-test1"
+
+# AWS Configuration
+aws:
+  region: "us-east-1" # Override with AWS_REGION environment variable
+
+# Nova Model Configuration
+nova:
+  model_id: "amazon.nova-2-lite-v1:0"
+  inference_config:
+    temperature: 0.3            # Low temperature for consistent, focused responses
+    topP: 0.9                   # High top-p for diverse but relevant reasoning
+    maxTokens: 10000            # Allow long responses for detailed reasoning
+    maxReasoningEffort: "low"   # Cost-optimized reasoning effort

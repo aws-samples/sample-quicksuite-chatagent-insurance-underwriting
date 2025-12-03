@@ -1,0 +1,9 @@
+boto3
+botocore
+fastmcp
+pydantic
+pyyaml
+aws-opentelemetry-distro>=0.10.1
+faker
+bedrock-agentcore-starter-toolkit
+requests

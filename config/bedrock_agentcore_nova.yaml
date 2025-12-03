@@ -1,0 +1,19 @@
+name: nova_2_lite_insurance_underwriting_mcp1
+entrypoint: mcpserver.py
+platform: linux/arm64
+container_runtime: none
+aws:
+  execution_role_auto_create: true
+  region: us-east-1
+  network_configuration:
+    network_mode: PUBLIC
+  protocol_configuration:
+    server_protocol: MCP
+  observability:
+    enabled: true
+memory:
+  mode: NO_MEMORY
+authorizer_configuration:
+  customJWTAuthorizer:
+    discoveryUrl: ''
+    allowedClients: []
